@@ -1,0 +1,60 @@
+test all 11 blocks, elapsed time: 118.69
+errs: trainedblocknum x current_batch_size x T/dt:  (11, 50, 400)
+errs[-1].max():  0.6216579758831628
+test all 11 blocks, elapsed time: 118.43
+errs: trainedblocknum x current_batch_size x T/dt:  (11, 50, 400)
+errs[-1].max():  0.45842681682541314
+test all 11 blocks, elapsed time: 118.75
+errs: trainedblocknum x current_batch_size x T/dt:  (11, 50, 400)
+errs[-1].max():  1.0439626581565569
+test all 11 blocks, elapsed time: 118.54
+errs: trainedblocknum x current_batch_size x T/dt:  (11, 50, 400)
+errs[-1].max():  0.6627356242800857
+test all 11 blocks, elapsed time: 118.64
+errs: trainedblocknum x current_batch_size x T/dt:  (11, 50, 400)
+errs[-1].max():  0.7974869178136041
+test all 11 blocks, elapsed time: 118.78
+errs: trainedblocknum x current_batch_size x T/dt:  (11, 50, 400)
+errs[-1].max():  0.5964948602537158
+test all 11 blocks, elapsed time: 118.56
+errs: trainedblocknum x current_batch_size x T/dt:  (11, 50, 400)
+errs[-1].max():  1.0385872872566038
+test all 11 blocks, elapsed time: 118.59
+errs: trainedblocknum x current_batch_size x T/dt:  (11, 50, 400)
+errs[-1].max():  1.1235850174564472
+test all 11 blocks, elapsed time: 118.55
+errs: trainedblocknum x current_batch_size x T/dt:  (11, 50, 400)
+errs[-1].max():  1.6843613620869036
+test all 11 blocks, elapsed time: 118.67
+errs: trainedblocknum x current_batch_size x T/dt:  (11, 50, 400)
+errs[-1].max():  1.1112255224540992
+test all 11 blocks, elapsed time: 118.62
+errs: trainedblocknum x current_batch_size x T/dt:  (11, 50, 400)
+errs[-1].max():  0.6629636186422425
+test all 11 blocks, elapsed time: 118.69
+errs: trainedblocknum x current_batch_size x T/dt:  (11, 50, 400)
+errs[-1].max():  0.6482306581774525
+test all 11 blocks, elapsed time: 118.64
+errs: trainedblocknum x current_batch_size x T/dt:  (11, 50, 400)
+errs[-1].max():  1.118052058713214
+test all 11 blocks, elapsed time: 118.62
+errs: trainedblocknum x current_batch_size x T/dt:  (11, 50, 400)
+errs[-1].max():  0.4020491846313398
+test all 11 blocks, elapsed time: 118.55
+errs: trainedblocknum x current_batch_size x T/dt:  (11, 50, 400)
+errs[-1].max():  0.9928474157004211
+test all 11 blocks, elapsed time: 118.52
+errs: trainedblocknum x current_batch_size x T/dt:  (11, 50, 400)
+errs[-1].max():  0.64021295344762
+test all 11 blocks, elapsed time: 118.52
+errs: trainedblocknum x current_batch_size x T/dt:  (11, 50, 400)
+errs[-1].max():  0.5065409350762012
+test all 11 blocks, elapsed time: 118.70
+errs: trainedblocknum x current_batch_size x T/dt:  (11, 50, 400)
+errs[-1].max():  1.1698581657304334
+test all 11 blocks, elapsed time: 118.52
+errs: trainedblocknum x current_batch_size x T/dt:  (11, 50, 400)
+errs[-1].max():  0.6328822872703641
+test all 11 blocks, elapsed time: 118.53
+errs: trainedblocknum x current_batch_size x T/dt:  (11, 50, 400)
+errs[-1].max():  0.5404607268886998
