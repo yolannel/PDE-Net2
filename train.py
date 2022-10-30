@@ -9,48 +9,48 @@ from scipy.optimize.slsqp import fmin_slsqp as slsqp
 from scipy.optimize import fmin_bfgs as bfgs
 import conf,setenv,initparameters
 #%%
-kw = None
-# kw = {
-#         '--name':'test',
-#         '--dtype':'double',
-#         '--device':'cuda:0',
-#         '--constraint':'frozen',
-#         # computing region
-#         '--eps':2*np.pi,
-#         '--dt':1e-2,
-#         '--cell_num':1,
-#         '--blocks':'0-6,9,12,15,18',
-#         # super parameters of network
-#         '--kernel_size':5,
-#         '--max_order':2,
-#         '--dx':2*np.pi/32,
-#         '--hidden_layers':3,
-#         '--scheme':'upwind',
-#         # data generator
-#         '--dataname':'burgers',
-#         '--viscosity':0.05,
-#         '--zoom':4,
-#         '--max_dt':1e-2/16,
-#         '--batch_size':28,
-#         '--data_timescheme':'rk2',
-#         '--channel_names':'u,v',
-#         '--freq':4,
-#         '--data_start_time':1.0,
-#         # data transform
-#         '--start_noise':0.001,
-#         '--end_noise':0.001,
-#         # others
-#         '--stablize':0.0,
-#         '--sparsity':0.005,
-#         '--momentsparsity':0.001,
-#         '--npseed':-1,
-#         '--torchseed':-1,
-#         '--maxiter':2000,
-#         '--recordfile':'None',
-#         '--recordcycle':200,
-#         '--savecycle':-1,
-#         '--start_from':-1,
-#         }
+# kw = None
+kw = {
+        '--name':'burgers-2-upwind-sparse0.005-noise0.001', # ${dataname}-${constraint}-${scheme}-sparse${sparsity}-noise${noise}
+        '--dtype':'double',
+        '--device':'cpu',
+        '--constraint':2,
+        # computing region
+        '--eps':2*np.pi,
+        '--dt':1e-2,
+        '--cell_num':1,
+        '--blocks':'0-6,9,12,15,18',
+        # super parameters of network
+        '--kernel_size':5,
+        '--max_order':2,
+        '--dx':2*np.pi/32,
+        '--hidden_layers':3,
+        '--scheme':'upwind',
+        # data generator
+        '--dataname':'burgers',
+        '--viscosity':0.05,
+        '--zoom':4,
+        '--max_dt':1e-2/16,
+        '--batch_size':28,
+        '--data_timescheme':'rk2',
+        '--channel_names':'u,v',
+        '--freq':4,
+        '--data_start_time':1.0,
+        # data transform
+        '--start_noise':0.001,
+        '--end_noise':0.001,
+        # others
+        '--stablize':0.0,
+        '--sparsity':0.005,
+        '--momentsparsity':0.001,
+        '--npseed':-1,
+        '--torchseed':-1,
+        '--maxiter':2000,
+        '--recordfile':'None',
+        '--recordcycle':200,
+        '--savecycle':-1,
+        '--start_from':-1,
+        }
 options = conf.setoptions(argv=sys.argv[1:],kw=kw,configfile=None)
 
 print(options)
