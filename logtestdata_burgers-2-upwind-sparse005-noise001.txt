@@ -1,0 +1,80 @@
+repeat batch:0, select device:0
+NPSEED: 10, TORCHSEED: 100
+wait
+configfile:  checkpoint/burgers-noise0.001/options.yaml
+repeat batch:1, select device:0
+NPSEED: 20, TORCHSEED: 200
+wait
+configfile:  checkpoint/burgers-noise0.001/options.yaml
+repeat batch:2, select device:0
+NPSEED: 30, TORCHSEED: 300
+wait
+configfile:  checkpoint/burgers-noise0.001/options.yaml
+repeat batch:3, select device:0
+NPSEED: 40, TORCHSEED: 400
+wait
+configfile:  checkpoint/burgers-noise0.001/options.yaml
+repeat batch:4, select device:0
+NPSEED: 50, TORCHSEED: 500
+wait
+configfile:  checkpoint/burgers-noise0.001/options.yaml
+repeat batch:5, select device:0
+NPSEED: 60, TORCHSEED: 600
+wait
+configfile:  checkpoint/burgers-noise0.001/options.yaml
+repeat batch:6, select device:0
+NPSEED: 70, TORCHSEED: 700
+wait
+configfile:  checkpoint/burgers-noise0.001/options.yaml
+repeat batch:7, select device:0
+NPSEED: 80, TORCHSEED: 800
+wait
+configfile:  checkpoint/burgers-noise0.001/options.yaml
+repeat batch:8, select device:0
+NPSEED: 90, TORCHSEED: 900
+wait
+configfile:  checkpoint/burgers-noise0.001/options.yaml
+repeat batch:9, select device:0
+NPSEED: 100, TORCHSEED: 1000
+wait
+configfile:  checkpoint/burgers-noise0.001/options.yaml
+repeat batch:10, select device:0
+NPSEED: 110, TORCHSEED: 1100
+wait
+configfile:  checkpoint/burgers-noise0.001/options.yaml
+repeat batch:11, select device:0
+NPSEED: 120, TORCHSEED: 1200
+wait
+configfile:  checkpoint/burgers-noise0.001/options.yaml
+repeat batch:12, select device:0
+NPSEED: 130, TORCHSEED: 1300
+wait
+configfile:  checkpoint/burgers-noise0.001/options.yaml
+repeat batch:13, select device:0
+NPSEED: 140, TORCHSEED: 1400
+wait
+configfile:  checkpoint/burgers-noise0.001/options.yaml
+repeat batch:14, select device:0
+NPSEED: 150, TORCHSEED: 1500
+wait
+configfile:  checkpoint/burgers-noise0.001/options.yaml
+repeat batch:15, select device:0
+NPSEED: 160, TORCHSEED: 1600
+wait
+configfile:  checkpoint/burgers-noise0.001/options.yaml
+repeat batch:16, select device:0
+NPSEED: 170, TORCHSEED: 1700
+wait
+configfile:  checkpoint/burgers-noise0.001/options.yaml
+repeat batch:17, select device:0
+NPSEED: 180, TORCHSEED: 1800
+wait
+configfile:  checkpoint/burgers-noise0.001/options.yaml
+repeat batch:18, select device:0
+NPSEED: 190, TORCHSEED: 1900
+wait
+configfile:  checkpoint/burgers-noise0.001/options.yaml
+repeat batch:19, select device:0
+NPSEED: 200, TORCHSEED: 2000
+wait
+configfile:  checkpoint/burgers-noise0.001/options.yaml

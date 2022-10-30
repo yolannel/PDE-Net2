@@ -13,7 +13,7 @@ import conf,setenv,initparameters
 kw = {
         '--name':'burgers-2-upwind-sparse0.005-noise0.001', # ${dataname}-${constraint}-${scheme}-sparse${sparsity}-noise${noise}
         '--dtype':'double',
-        '--device':'cpu',
+        '--device':'cuda:0', #'cuda:0', 'cpu'
         '--constraint':2,
         # computing region
         '--eps':2*np.pi,
