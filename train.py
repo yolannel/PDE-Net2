@@ -2,7 +2,7 @@
 import sys,time
 import numpy as np
 import torch
-import timeout_decorator
+# import timeout_decorator
 from aTEAM.optim import NumpyFunctionInterface
 from scipy.optimize.lbfgsb import fmin_l_bfgs_b as lbfgsb
 from scipy.optimize.slsqp import fmin_slsqp as slsqp
@@ -11,7 +11,7 @@ import conf,setenv,initparameters
 #%%
 # kw = None
 kw = {
-        '--name':'burgers-2-upwind-sparse0.005-noise0.001', # ${dataname}-${constraint}-${scheme}-sparse${sparsity}-noise${noise}
+        '--name': 'testing', # 'burgers-2-upwind-sparse0.005-noise0.001', # ${dataname}-${constraint}-${scheme}-sparse${sparsity}-noise${noise}
         '--dtype':'double',
         '--device':'cuda:0', #'cuda:0', 'cpu'
         '--constraint':2,
@@ -19,7 +19,7 @@ kw = {
         '--eps':2*np.pi,
         '--dt':1e-2,
         '--cell_num':1,
-        '--blocks':'0-6,9,12,15,18',
+        '--blocks': '0-1',#'0-6,9,12,15,18',
         # super parameters of network
         '--kernel_size':5,
         '--max_order':2,
@@ -95,12 +95,21 @@ for block in blocks:
     # generate data
     u_obs,u_true,u = \
             setenv.data(model,data_model,globalnames,sampling,addnoise,block,data_start_time)
+    torch.save(u_obs, 'u_obs.pt')
     print("u_obs shape: batchsize x channelNum x xgridsize x ygridsize")
     print(u_obs[0].shape)
     print("u_obs.abs().max()")
     print(u_obs[0].abs().max())
     print("u_obs variance")
     print(initparameters.trainvar(model.UInputs(u_obs[0])))
+
+    torch.save(u_true, 'u_true.pt')
+    print("u_true shape: batchsize x channelNum x xgridsize x ygridsize")
+    print(u_true[0].shape)
+    print("u_true.abs().max()")
+    print(u_true[0].abs().max())
+    print("u_true variance")
+    print(initparameters.trainvar(model.UInputs(u_true[0])))
     # set NumpyFunctionInterface
     def forward():
         stableloss,dataloss,sparseloss,momentloss = \
@@ -161,7 +170,7 @@ for block in blocks:
             print('finally, finish this stage', file=output)
         callback.record(xopt, callback.ITERNUM)
         callbackhookhandle.remove()
-        @timeout_decorator.timeout(10)
+        # @timeout_decorator.timeout(10)
         def printcoeffs():
             with callback.open() as output:
                 print('current expression:', file=output)
@@ -171,9 +180,9 @@ for block in blocks:
                     print(csym[:20], file=output)
         try:
             printcoeffs()
-        except timeout_decorator.TimeoutError:
-            with callback.open() as output:
-                print('Time out', file=output)
+        # except timeout_decorator.TimeoutError:
+        #     with callback.open() as output:
+        #         print('Time out', file=output)
 #%%
 u_obs,u_true,u = \
         setenv.data(model,data_model,globalnames,sampling,addnoise,block=1,data_start_time=0)
